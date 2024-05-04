@@ -188,8 +188,10 @@ const PostModal = ({ visible, onClose, setShowModal, post }) => {
                     height: 55,
                     width: 300,
                 });
-                setTimeout(() => setShowModal(false), 1000);
-                window.location.reload()
+                setTimeout(() => {
+                    setShowModal(false);
+                    window.location.reload();
+                }, 1000);
             }
         } catch (error) {
             setPublishError('Something went wrong');
