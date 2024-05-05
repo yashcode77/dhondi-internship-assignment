@@ -176,7 +176,7 @@ const PostModal = ({ visible, onClose, setShowModal, post }) => {
 
             if (res.ok) {
                 setPublishError(null);
-                navigate('/your-feeds');
+                // navigate('/your-feeds');
                 toast.success(<ToastContent />, {
                     position: 'top-center',
                     autoClose: 2000,
@@ -190,7 +190,7 @@ const PostModal = ({ visible, onClose, setShowModal, post }) => {
                 });
                 setTimeout(() => {
                     setShowModal(false);
-                    window.location.reload();
+                    // window.location.reload();
                 }, 1000);
             }
         } catch (error) {
@@ -210,7 +210,7 @@ const PostModal = ({ visible, onClose, setShowModal, post }) => {
                         type="text"
                         className="border border-gray-700 p-2 rounded mb-5"
                         placeholder="Write Title"
-                        value={formData.title}
+                        // value={formData.title}
                         onChange={(e) => {setFormData({ ...formData, title: e.target.value })
                       console.log(e.target.value)}}
                     />
